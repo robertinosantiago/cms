@@ -11,10 +11,10 @@
     <?php foreach($articles as $article): ?>
       <tr>
         <td>
-          <?php echo $this->Html->link($article->title, ['action' => 'view', $article->slug]); ?>
+          <?php echo $this->Html->link($article->title, ['controller' => 'Articles', 'action' => 'view', $article->slug]); ?>
         </td>
         <td>
-          <?php echo $article->created->format(DATE_RFC850); ?>
+          <?php echo $article->created->format('d/m/Y H:i'); ?>
         </td>
       </tr>
     <?php endforeach; ?>
