@@ -1,10 +1,13 @@
 <h1>Artigos</h1>
 
+<?php echo $this->Html->link('Novo artigo', ['action' => 'add']); ?>
+
 <table>
   <thead>
     <tr>
       <th>Título</th>
       <th>Criado em</th>
+      <th>Ações</th>
     </tr>
   </thead>
   <tbody>
@@ -15,6 +18,9 @@
         </td>
         <td>
           <?php echo $article->created->format('d/m/Y H:i'); ?>
+        </td>
+        <td>
+          <?php echo $this->Html->link('Editar', ['action' => 'edit', $article->slug]); ?>
         </td>
       </tr>
     <?php endforeach; ?>
