@@ -21,6 +21,7 @@
         </td>
         <td>
           <?php echo $this->Html->link('Editar', ['action' => 'edit', $article->slug]); ?>
+          <?php echo $this->Form->postLink('Excluir', ['action' => 'delete', $article->slug], ['confirm' => 'Confirma exclusão?']); ?>
         </td>
       </tr>
     <?php endforeach; ?>
